@@ -7,7 +7,7 @@ RUN \
     echo "@edge http://nl.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk --update upgrade musl && \
     apk --no-cache add \
-      git make g++ nodejs python \
+      git make g++ nodejs nodejs-npm python \
       elixir@edge=1.4.4-r0 && \
     rm -rf /var/cache/apk/*
 
