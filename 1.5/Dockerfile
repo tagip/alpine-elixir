@@ -12,3 +12,9 @@ RUN \
 # Install Hex+Rebar
 RUN mix local.hex --force && \
     mix local.rebar --force
+    
+RUN git config --system http.sslverify false && \
+  git clone https://github.com/tagip/hex.git && \
+  cd hex && \
+  mix deps.get && \
+  mix install
